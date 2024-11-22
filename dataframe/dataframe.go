@@ -507,16 +507,19 @@ func (gps Groups) Aggregation(typs []AggregationType, colnames []string) DataFra
 
 	// Save column types
 	colTypes := map[string]series.Type{}
-	for k := range dfMaps[0] {
-		switch dfMaps[0][k].(type) {
-		case string:
-			colTypes[k] = series.String
-		case int, int16, int32, int64:
-			colTypes[k] = series.Int
-		case float32, float64:
-			colTypes[k] = series.Float
-		default:
-			continue
+	colTypes := map[string]series.Type{}
+	if len(dfMaps) > 0 {
+		for k := range dfMaps[0] {
+			switch dfMaps[0][k].(type) {
+			case string:
+				colTypes[k] = series.String
+			case int, int16, int32, int64:
+				colTypes[k] = series.Int
+			case float32, float64:
+				colTypes[k] = series.Float
+			default:
+				continue
+			}
 		}
 	}
 
