@@ -1,4 +1,4 @@
-module github.com/bewyz/gota
+module github.com/bewhyz/gota
 
 go 1.22.9
 
