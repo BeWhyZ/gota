@@ -1,8 +1,9 @@
-module github.com/go-gota/gota
+module github.com/bewyz/gota
 
-go 1.16
+go 1.22.9
 
 require (
-	golang.org/x/net v0.0.0-20210423184538-5f58ad60dda6
-	gonum.org/v1/gonum v0.9.1
+	github.com/go-gota/gota v0.12.0
+	golang.org/x/net v0.31.0
+	gonum.org/v1/gonum v0.15.1
 )

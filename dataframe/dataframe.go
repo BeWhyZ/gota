@@ -507,7 +507,6 @@ func (gps Groups) Aggregation(typs []AggregationType, colnames []string) DataFra
 
 	// Save column types
 	colTypes := map[string]series.Type{}
-	colTypes := map[string]series.Type{}
 	if len(dfMaps) > 0 {
 		for k := range dfMaps[0] {
 			switch dfMaps[0][k].(type) {
